@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+	background-color: yellow;
+	border: 1px solid black;
+	height: 600px;	
+	display: grid;
+	grid-template: 
+	  'top top top top'
+	  'men pr  pr  pr '
+	  'men pr  pr  pr '
+	  'pi  pi  pi  pi '  ;
+
+	gap: 10px;
+	padding: 10px;
+}
+
+.box {
+    background: #4a72ca;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+	border: 3px dashed red;
+}
+
+.box3 {
+	background: red;
+	grid-area: pi;
+}
+.box7 {
+	background: green;
+	grid-area: top;
+}
+
+.box2 {
+	background: orange;
+	grid-area: men;
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		grid-template: 
+		'men pr  pr  '
+		'men pr  pr  '
+		'men pr  pr  '
+		'pi  pi  pi  '  
+		'top top top';
+	}  
+  
+}
